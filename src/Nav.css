@@ -46,6 +46,8 @@
 }
 
 .nav__avatar {
+  display: flex;
+  align-items: center;
   position: fixed;
   right: 20px;
   width: 30px;
