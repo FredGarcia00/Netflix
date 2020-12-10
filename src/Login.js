@@ -54,8 +54,8 @@ function Login() {
                 <div className="login__title">
                   <h1>sign in</h1>
                 </div>
-                <TextField value={email} onChange={e => setEmail(e.target.value)} id="login__field"  label="Email or phone number" variant='standard' />
-                <TextField value={password} onChange={e => setPassword(e.target.value)} id="login__field" label="Password" variant='standard' />
+                <TextField value={email} onChange={e => setEmail(e.target.value)} id="login__field"  label="Email example@example.com" variant='standard' />
+                <TextField value={password} onChange={e => setPassword(e.target.value)} id="login__field" label="Password abc123" variant='standard' />
                     <button onClick={login} className="login__signIn">sign in</button>
                     <div className="login__signUp1">New to Netflix?</div>
                     <div onClick={register} className="login__signUp">sign up here</div>
