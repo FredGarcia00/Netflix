@@ -1,91 +1,166 @@
 .login {
-    overflow-y: hidden;
-    position: relative;
-    /* background: url('https://assets.nflxext.com/ffe/siteui/vlv3/43375087-3875-4574-86c4-4c14c3473535/9a253a8f-2091-4850-accd-f2768b1f9f6c/US-en-20200921-popsignuptwoweeks-perspective_alpha_website_large.jpg '); */
-    height: 100vh;
-    /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background-color: #000;
+  height: 100vh;
 }
 
-.login__background{
-    object-fit: contain;
-    /* width: 100%; */
-    z-index: -2;
-}
-
-.login__transparent {
-    /* overflow-x: hidden; */
-    display: flex;
-    background: rgba(0,0,0, .55);
-    height: 100vh;
-    /* width: 100vw; */
-    z-index: -1;
+.login__container {
+  margin-left: 15px;
 }
 
 .login__logo {
-    height: 30px;
-    position: absolute;
-    top: 0;
-    left: 28px;
-    margin-top: 30px;
+  height: 20px;
+  width: 30%;
+  margin-top: 17px;
+  margin-bottom: 15px;
+  margin-left: -8px;
 }
-.login__form {
-    position: absolute;
-    top: 11%;
-    left: 31%;
+
+.login__title > h1 {
+  text-transform: capitalize;
+  margin-bottom: 28px;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.login__custom__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__custom-field {
+  position: relative;
+}
+
+.login__custom-field > input {
+  background: #333;
+  padding-left: 20px;
+  color: #fff;
+  margin-bottom: 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  height: 55px;
+  width: 85%;
+  line-height: 50px;
+  outline: none;
+}
+
+.login__placeholder {
+  position: absolute;
+  left: 12px;
+  color: #8c8c8c;
+  top: calc(50%);
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+input:valid + .login__placeholder,
+input:focus + .login__placeholder {
+  top: -10px;
+  font-size: 13px;
+}
+
+.login__custom-field-1 {
+  position: relative;
+}
+
+.login__custom-field-1 > input {
+  background: #333;
+  padding-left: 20px;
+  color: #fff;
+  margin-bottom: 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  height: 55px;
+  width: 85%;
+  line-height: 50px;
+  outline: none;
+}
+
+.login__placeholder-1 {
+  position: absolute;
+  left: 12px;
+  color: #8c8c8c;
+  top: calc(50%);
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+input:valid + .login__placeholder-1,
+input:focus + .login__placeholder-1 {
+  top: -10px;
+  font-size: 13px;
+}
+.login__btn {
+  color: #fff;
+  text-transform: capitalize;
+  background: #e50914;
+  width: 93%;
+  padding: 15px;
+  margin: 24px 0 12px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.login__registerContainer {
+  display: flex;
+}
+
+.login__question {
+  margin-top: 16px;
+  color: #737373;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.login__signUp {
+  text-transform: capitalize;
+  margin-top: 16px;
+  margin-left: 5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 440px) {
+  .login__container {
+    margin-left: 25px;
+  }
+  .login__logo {
+    height: 50px;
+  }
+  .login__title > h1 {
+    font-size: 45px;
+  }
+}
+
+@media screen and (min-width: 542px) {
+  .login__logo {
+    height: 25px;
+    margin-left: -48px;
+  }
+  .login__title > h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .login__container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    z-index: 1;
+    align-items: center;
+  }
+
+  .login__logo {
+    height: 40px;
+    margin-left: -40px;
+    margin-bottom: 60px;
+  }
 }
-
-.login__form > form {
-    transform: translate(30px, 58px);
-    max-width: 397px;
-    display: flex;
-    flex-direction: column;
-    padding: 57px;
-    background: rgba(0,0,0, .75);
-}
-
-#login__field {
-    background: darkgray;
-    color: #fff;
-    /* font-size: 14px; */
-    padding: 14px 50px;
-    border-radius: 5px;
-}
-
-.login__title {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 30px;
-    text-transform: capitalize;
-}
-
-
-.login__signIn{
-    background-color: #e50914;
-    padding: 15px 60px;
-    color: #fff;
-    /* font-size: 19px; */
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 40px;
-    border: 1px solid #000;
-}
-
-.login__signUp1{
-    color: rgb(245, 234, 234);
-}
-
-.login__signUp{
-    cursor: pointer;
-    color: #fff;
-}
-
-
-
-
